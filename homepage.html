@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website - Homepage</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+      function redirectToLogin() {
+        // Replace 'login.html' with the actual path to your login page
+        window.location.href = 'loginpage.html';
+      }
+    </script>
+</head>
+<body>
+  <div class="flex flex-col h-screen">
+    <header class="flex justify-between items-center py-4 px-8 bg-white shadow-md ">
+
+        <!-- Burger Menu Icon -->
+        <div class="burger-menu relative">
+            <button id="burgerButton" class="text-blue-500 hover:text-purple-500 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Menu (hidden by default) -->
+            <div id="menu" class="absolute left-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl hidden">
+                <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-purple-500 hover:text-white">Home</a>
+                <a href="#itinerary" class="block px-4 py-2 text-gray-800 hover:bg-purple-500 hover:text-white">Destination</a>
+                <a href="#reg-form" class="block px-4 py-2 text-gray-800 hover:bg-purple-500 hover:text-white">Registration</a>
+                <a href="#aboutus" class="block px-4 py-2 text-gray-800 hover:bg-purple-500 hover:text-white">About Us</a>
+            </div>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724544000&semt=ais_hybrid" class="h-12 w-12 rounded-full mr-4" alt="Travel Website Logo">
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="flex space-x-6">
+            <a href="#home" class="text-black hover:text-blue-500">Home</a>
+            <a href="#itinerary" class="text-black hover:text-blue-500">Destination</a>
+            <a href="#reg-form" class="text-black hover:text-blue-500">Register</a>
+            <a href="#aboutus" class="text-black hover:text-blue-500">About us</a>
+        </nav>
+    
+        <!-- Search Bar -->
+        <form class="flex items-center w-full max-w-md mx-4" action="#" method="get" style="z-index: 10;">
+            <input type="text" name="search" class="w-full px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500" placeholder="Where to?">
+            <button type="submit" class="ml-2 bg-blue-500 hover:bg-purple-600 text-white py-2 px-4 rounded-full">Search</button>
+        </form>
+    
+        <!-- Sign In Button -->
+        <div>
+           <a href="#reg-form" class="bg-blue-500 hover:bg-purple-600 text-white py-2 px-4 rounded-full">Sign In</a>
+        </div>
+  </header>
+    <!-- home page-->
+      
+    <!-- Home Page Section -->
+    <main class="flex-1 overflow-y-auto p-5">
+
+    <!-- Video Background Home Page Section -->
+<section id="home" class="relative h-screen">
+  <!-- Video Background -->
+  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="https://cdn.pixabay.com/video/2018/09/23/18386-291585298_large.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Text Content -->
+  <div id="home" class="relative z-10 flex items-center justify-center h-full bg-black bg-opacity-50">
+    <div class="text-center text-white">
+      <h1 class="text-5xl font-bold mb-4">Explore the World with Travellivania</h1>
+      <p class="text-xl mb-8">Discover amazing destinations, hidden gems, and curated experiences.</p>
+      <a href="#itinerary" class="bg-blue-500 hover:bg-purple-600 text-white py-3 px-8 rounded-full text-lg">Discover Destinations</a>
+    </div>
+  </div>
+</section>
+
+<!--greece, melbourne, mumbai,paris -->
+
+<!-- Itinerary Section -->
+<section id="itinerary" class="py-16 bg-gray-100">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-600">Explore Our Itineraries</h2>
+
+    <!-- Itinerary Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Mumbai Itinerary -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" alt="Mumbai" class="rounded-t-lg h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Mumbai</h3>
+          <p class="text-gray-600 mb-4">Explore the vibrant city of Mumbai, a bustling metropolis with a rich history, diverse culture, and iconic landmarks like the Gateway of India and the Chhatrapati Shivaji Maharaj Terminus.</p>
+          <a href="WP/mumbai.html" class="text-blue-500 hover:text-purple-600 font-semibold">See Itinerary</a>
+        </div>
+      </div>
+
+
+      <!-- Paris Itinerary -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img src="https://www.thetrainline.com/cms/media/1360/france-eiffel-tower-paris.jpg?mode=crop&width=1080&height=1080&quality=70" alt="Paris" class="rounded-t-lg h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Paris</h3>
+          <p class="text-gray-600 mb-4">Visit the romantic city of Paris, known for its history, culture, and iconic attractions like the Eiffel Tower and the Louvre.</p>
+          <a href="WP/Paris.html" class="text-blue-500 hover:text-purple-600 font-semibold">See Itinerary</a>
+        </div>
+      </div>
+
+      <!-- Melbourne Itinerary -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img src="https://static.independent.co.uk/2023/06/12/13/newFile-3.jpg" alt="Melbourne" class="rounded-t-lg h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Melbourne</h3>
+          <p class="text-gray-600 mb-4">Explore the artistic and cosmopolitan city of Melbourne, known for its vibrant culture and scenic views.</p>
+          <a href="WP/Melbourne.html" class="text-blue-500 hover:text-purple-600 font-semibold">See Itinerary</a>
+        </div>
+      </div>
+
+      <!-- Greece Itinerary -->
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img src="https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlZWNlfGVufDB8fDB8fHww" alt="Greece" class="rounded-t-lg h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Greece</h3>
+          <p class="text-gray-600 mb-4">Discover the timeless beauty of Greece, a land of ancient history, stunning landscapes, and vibrant culture. Explore the iconic Acropolis in Athens, relax on the pristine beaches of Santorini, or sail the crystal-clear waters of the Aegean Sea.</p>
+          <a href="WP/greece.html" class="text-blue-500 hover:text-purple-600 font-semibold">See Itinerary</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">What Our Travelers Say</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <p class="text-lg italic">"Travellivania made my trip unforgettable. Their recommendations were spot on!"</p>
+          <p class="mt-4 text-gray-600 font-semibold">- Sarah, France</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <p class="text-lg italic">"The best travel experience I've had. I discovered hidden gems I would've missed!"</p>
+          <p class="mt-4 text-gray-600 font-semibold">- John, USA</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <p class="text-lg italic">"The guides were so helpful. I can't wait for my next adventure!"</p>
+          <p class="mt-4 text-gray-600 font-semibold">- Maria, Australia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="py-16 bg-blue-500 text-white">
+    <div id="reg-form" class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to Start Your Adventure?</h2>
+      <p class="text-xl mb-8">Join thousands of travelers who trust Travellivania to guide their trips!</p>
+      <button class="bg-white text-blue-500 hover:bg-purple-600 hover:text-white py-3 px-8 rounded-full text-lg" onclick="redirectToLogin()">Register Now</button>
+      
+    </div>
+  </section>
+                              
+  <section id="about" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">About Us</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Welcome to our travel platform! We are dedicated to providing travelers with the best
+                experiences, ensuring you find the perfect destination, hotel, or adventure. Our mission is to
+                make traveling easier and more enjoyable by offering personalized recommendations, reviews,
+                and travel tips. Whether you're planning a weekend getaway or a month-long adventure, we are
+                here to guide you every step of the way.<br>
+                With a team of passionate travelers and travel experts, we have curated a wide range of resources
+                tailored to your travel needs. Whether you’re looking for a bustling city getaway, a serene beach retreat,
+                or an adventurous mountain trek, we have options to suit every traveler’s desire.<br>
+                We believe that travel should be accessible to everyone. Our goal is to empower you with the knowledge
+                and tools you need to explore the world with confidence. We provide detailed itineraries, insider
+            </p>
+            </p>
+            <!-- about us -->
+            <div id="aboutus" class="flex gap-x-4 flex-column justify-between items-center mx-8 my-10 bg-white"></div>
+            <div class="flex justify-center">
+                <img src="about us.jpg" alt="About Us Image" class="rounded-lg shadow-lg h-64">
+            </div>
+        </div>
+    </section>
+    
+</div>
+</main>
+    </div>
+</body>
+</html>
